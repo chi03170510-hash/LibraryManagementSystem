@@ -1,0 +1,113 @@
+.social-wrapper {
+  padding: 0;
+  background: transparent;
+  min-height: 100vh;
+}
+
+.social-header {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.social-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1A202C;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.social-subtitle {
+  color: #718096;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.social-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.social-action {
+  background: linear-gradient(135deg, #5B6EF5 0%, #8758FF 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(91, 110, 245, 0.25);
+}
+
+.social-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(91, 110, 245, 0.35);
+}
+
+.social-action svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.social-feed {
+  max-width: 100%;
+}
+
+.social-section-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A202C;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.social-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(91, 110, 245, 0.12);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: #1A202C;
+  border: 1px solid rgba(91, 110, 245, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(91, 110, 245, 0.2);
+}
+
+.social-icon {
+  color: #1A202C;
+  font-size: 1.8rem;
+  margin-top: 4px;
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .social-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.social-comment {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #4A5568;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+  

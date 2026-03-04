@@ -1,0 +1,284 @@
+/* ==== Tổng thể ==== */
+.transactions-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.transactions-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  text-align: left;
+  color: #1A202C;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==== Danh sách ==== */
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ==== Thẻ giao dịch ==== */
+.transaction-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(91, 110, 245, 0.12);
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(91, 110, 245, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.transaction-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  transition: all 0.3s ease;
+}
+
+.transaction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(91, 110, 245, 0.2);
+}
+
+/* ==== Màu viền trạng thái ==== */
+.transaction-card.BORROWED::before {
+  background: linear-gradient(180deg, #FFB946 0%, #FFA500 100%);
+}
+.transaction-card.RETURNED::before {
+  background: linear-gradient(180deg, #00D9A5 0%, #00B386 100%);
+}
+.transaction-card.LATE::before {
+  background: linear-gradient(180deg, #FF5757 0%, #FF6B9D 100%);
+}
+
+/* ==== Header ==== */
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.transaction-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.transaction-id {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1A202C;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-status.BORROWED {
+  background: rgba(255, 185, 70, 0.15);
+  color: #FFB946;
+}
+.transaction-status.RETURNED {
+  background: rgba(0, 217, 165, 0.15);
+  color: #00D9A5;
+}
+.transaction-status.LATE {
+  background: rgba(255, 87, 87, 0.15);
+  color: #FF5757;
+}
+
+.transaction-status svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.transaction-date {
+  font-size: 1rem;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.transaction-date svg {
+  color: #1A202C;
+}
+
+/* ==== Nội dung chính ==== */
+.transaction-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.transaction-info,
+.transaction-books {
+  flex: 1 1 300px;
+  min-width: 260px;
+  color: #4A5568;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-info p {
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.transaction-info svg,
+.transaction-books svg {
+  color: #1A202C;
+}
+
+.transaction-fine {
+  color: #FF5757;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.transaction-books ul {
+  margin-top: 12px;
+  padding-left: 24px;
+}
+
+.transaction-books li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.transaction-books strong {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.book-status {
+  margin-left: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+.book-status.BORROWED {
+  background: rgba(255, 185, 70, 0.15);
+  color: #FFB946;
+}
+.book-status.RETURNED {
+  background: rgba(0, 217, 165, 0.15);
+  color: #00D9A5;
+}
+.book-status.LATE {
+  background: rgba(255, 87, 87, 0.15);
+  color: #FF5757;
+}
+
+/* ==== QR code ==== */
+.transaction-qr {
+  background: linear-gradient(135deg, rgba(91, 110, 245, 0.05), rgba(135, 88, 255, 0.05));
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgba(91, 110, 245, 0.15);
+  box-shadow: 0 4px 16px rgba(91, 110, 245, 0.08);
+}
+
+.transaction-qr svg {
+  padding: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(91, 110, 245, 0.12);
+}
+
+.qr-label {
+  font-size: 1rem;
+  color: #1A202C;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+.qr-label strong {
+  color: #1A202C;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.qr-tip {
+  font-size: 0.9rem;
+  color: #718096;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ==== Trạng thái loading / error ==== */
+.loading,
+.error,
+.no-result {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.3rem;
+  color: #718096;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .transaction-card {
+    padding: 24px 20px;
+  }
+  
+  .transactions-title {
+    font-size: 2rem;
+  }
+  
+  .transaction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .transaction-body {
+    flex-direction: column;
+  }
+  .transaction-qr {
+    width: 100%;
+  }
+}

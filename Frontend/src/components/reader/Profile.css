@@ -1,0 +1,97 @@
+.profile-wrapper {
+    padding: 24px;
+    background: #f9fafb;
+    min-height: 100vh;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .profile-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .profile-subtitle {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .profile-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .profile-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000;
+  }
+  
+  .profile-icon {
+    color: #007bff;
+    font-size: 1.4rem;
+  }
+  
+  .profile-label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .profile-value {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+  }
+  
+  .profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .edit-btn {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .edit-btn:hover {
+    background: #0056b3;
+  }
+  
+  .qr-btn {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .qr-btn:hover {
+    background: #1e7e34;
+  }
+  

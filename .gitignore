@@ -1,0 +1,21 @@
+﻿# OS / Editor
+.DS_Store
+Thumbs.db
+/.idea/
+/.vscode/
+*.iml
+
+# Backend (Spring Boot)
+/Backend/target/
+/Backend/**/target/
+
+# Frontend (Vite/Node)
+/Frontend/node_modules/
+/Frontend/dist/
+/Frontend/.vite/
+/Frontend/.eslintcache
+
+# Logs & temps
+*.log
+/temp.patch
+
